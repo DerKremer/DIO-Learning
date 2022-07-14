@@ -1,0 +1,149 @@
+JavaScript
+
+tipagem: fraca (pouco obrigatória a declaração do tipo de dado)
+ex var numero = 1; (numero é convertido em tipo number)
+
+tipos primitivos de variáveis: Boolean, null, undefined, Number, String, Array, Object, Function
+
+declaração de variáveis:
+var - global e local, se não tiver valor inicial, é null
+let - escopo local de bloco (deixa de existir quando acaba o bloco de código)
+const - escopo local de bloco, somente leitura, inicia com valor obrigatório e não pode ser alterada.
+
+Escopo:
+global - declarada fora dos blocos, disponível em todo o código
+local - criada dentro de um bloco de código, visibilidade disponível ou não
+
+Regras:
+início com letras, underscore, ou cifrão; nunca iniciar com números
+não usar espaços - usar camelCase (maiúscula no meio) ou _
+não usar palavras reservadas - function;
+declarar variáveis no topo do bloco de código;
+
+ATRIBUIÇÃO: =
+COMPARAÇÃO VALOR: ==
+COMPARAÇÃO IDENTICA: === (tipo também)
+
+OPERADORES ARITMÉTICOS:
++ adição
+- subtração
+* multiplicação
+/ divisão real
+% divisão inteira (MOD)
+** potenciação
+
+OPERADORES RELACIONAIS:
+> maior que
+< menor que
+<= menor ou igual
+>= maior ou igual
+
+OPERADORES LÓGICOS:
+&& - e - ambos true
+|| - ou - qualquer valor true
+! - não - inverte true para false e vice-versa
+
+VETORES/ARRAYS:
+são lista ou matriz de variáveis, onde cada uma possui um índice. valores podem de vários tipos, incluindo outros arrays
+ex: let array = ['string', 1, true...];
+console.log(array[0]);
+
+Manipulando Arrays:
+forEach() - itera (function pra cada índice)
+push() - add final
+pop() - remove final
+shift() - remove inicio
+unshift() - add inicio
+indexOf() - retorna índice de um valor
+splice() - remove ou substitui item pelo índice
+slice() - retorna parte de um array
+
+
+CONDICIONAIS
+if
+else
+else if
+
+aninhamento de ifs
+
+if ternário - [condição] ? [instrução1] : [instrução2];
+ex.: jogador1 > 0 ? console.log('marcou ponto') : console.log('não marcou ponto');
+
+switch/case
+ex.:	switch (${expressao}) {
+			case 1:
+				${instrucao};
+			break;
+			case 2:
+				${instrucao};
+			break;
+}
+
+
+
+ESTRUTURAS DE REPETIÇÃO
+Laços/Loops
+
+for - for([expressaoInicial]; [condicao]; [incremento]) { declaracao }
+ex.: var array = ['valor1', 'valor2', 'valor3', 'valor4']
+	for (let i=0; i < array.length; i++) {
+	console.log(i);
+	}
+
+// //for/in repete a partir de propriedade
+// for (let i in array) {
+//     console.log(i);
+// }
+
+// //com object
+// for (i in object) {
+//     console.log(i);
+// }
+
+// // for/of repete a partir de valor
+// for(i of array) {
+//     console.log(i);
+// }
+
+// // for / of não funciona com objetos, pois as propriedades variam, diferente de um índice em array que sempre são números inteiros
+// for (i of object.propriedade1) {
+//     console.log(i);
+// }
+
+// while executa enquanto condição for verdadeira - não declara variável dentro da condição;
+
+var a = 0;
+while (a < 10) {
+    a++;
+    console.log(a);
+}
+
+var a = 0;
+do {
+    a++;
+    console.log(a);
+} while (a < 10);
+
+
+
+FUNÇÕES
+
+funções criam blocos de código que podem ser chamados posteriormente, realizando instruções
+function nomeDaFuncao(){
+	${instrucao};
+	}
+ex:
+// function funcao(){
+//     console.log('Tudo certo jovem!');
+// }
+
+// funcao();
+
+
+
+funções com parâmetro - podem receber parâmetro que serve como variável e pode receber atribuição durante a chamada
+ex: function nomeDaFuncao(parametro){
+	${instrucao};
+	}
+	
+nomeDaFuncao(valorDoParametro)
