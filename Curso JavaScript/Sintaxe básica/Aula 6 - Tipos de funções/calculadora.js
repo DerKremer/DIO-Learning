@@ -78,7 +78,7 @@ if (operacao <= 6 && operacao >= 1) {
         //         soma();
         //         break;
         //     case 2:
-        //         subtracao();
+    //         subtracao();
         //         break;
         //     case 3:
         //         multiplicacao();
