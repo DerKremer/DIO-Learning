@@ -147,3 +147,52 @@ ex: function nomeDaFuncao(parametro){
 	}
 	
 nomeDaFuncao(valorDoParametro)
+
+
+
+
+
+MÉTODOS NATIVOS - CALCULADORA
+Number() - converte valores em números
+Prompt() - registra entradas de usuário
+Alert() - mostra mensagem ao usuário
+Template Strings - usar strings com expressões
+
+
+
+MAIS OPERADORES
+
+Atribuição:
+= atribui
++= ele mesmo mais segundo valor
+*= ele mesmo vezes ..
+/= ..
+%= ..
+
+Aritmética:
++
+-
+*
+** exponencial
+/
+% módulo (resto)
+++ incrementar 1
+-- decrementar 1
+
+Comparação:
+== igual a (valor)
+=== mesmo valor e mesmo tipo
+!= diferente
+!== valores e tipo diferentes
+> maior que
+< menor que
+>= maior ou igual
+<= menor ou igual
+
+Lógica:
+&& "e" lógico
+|| "ou" lógico
+! "não" lógico
+
+Condicional (ternário)
+(condition) ? expression1(true) : expression2(false)
