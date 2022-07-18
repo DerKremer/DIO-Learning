@@ -1,0 +1,248 @@
+
+MAIS OPERADORES
+
+Atribuição:
+= atribui
++= ele mesmo mais segundo valor
+*= ele mesmo vezes ..
+/= ..
+%= ..
+
+Aritmética:
++
+-
+*
+** exponencial
+/
+% módulo (resto)
+++ incrementar 1
+-- decrementar 1
+
+Comparação:
+== igual a (valor)
+=== mesmo valor e mesmo tipo
+!= diferente
+!== valores e tipo diferentes
+> maior que
+< menor que
+>= maior ou igual
+<= menor ou igual
+
+Lógica:
+&& "e" lógico
+|| "ou" lógico
+! "não" lógico
+
+Condicional (ternário)
+(condition) ? expression1(true) : expression2(false)
+
+
+
+--------JS BÁSICO--------
+ESTRUTURA DE DADOS - JS é tipagem dinâmica; antes de  declarar não precisa especificar tipo (JAVA é fortemente tipada)
+TIPOS DE DADOS - Primitivos (numbers, strings, boolean, null, undefined ; Compostos/Não-primitivos (objects, arrays);
+
+
+STRINGS:
+- usado para textos, entre aspas - diversos métodos relacionados usando "."
+-com S maiúsculo vira objeto
+-é iterável (array)
+
+Objetos - 
+obj = {
+key: value
+}
+obj.key = value
+
+
+
+-------------FUNÇÕES------------
+Estrutura:
+function nome(parametros) {
+	//instruções
+	return; //valor de retorno
+}
+(variáveis criadas dentro da function funcionam somente dentro dela)
+
+Função anônima:
+representam expressões - vars podem armazenar funçoes
+const soma = function (a,b) {
+	return a+b;
+}
+
+soma(1, 2) //3
+soma(5, 4) //9
+
+Função autoinvocável:
+(IIFE - Immediately Invoked Function Expression)
+função anônima entre parênteses, seguida por outro par de parênteses, que representa sua chamada
+(
+	function(){
+		let name = 'Digital Innovation One';
+		return name;
+	}
+)();
+//Digital Innovation One
+
+pode ser usada com parâmetros e armazenada em uma variável
+
+(
+	function(a, b){
+		return a+b;
+	}
+)(1,2); //3
+
+const soma3 = (
+	function(a,b){
+		return a+b;
+	}
+)(1,2);
+
+console.log(soma3); //3
+
+
+Callbacks:
+Consiste em passar uma função como parâmetro para outra. Você pode criar uma função que recebe os parâmetros (operacao, num1, num2), e dentro "return operacao(num1, num2)", assim garantindo um esqueleto para criar funções futuramente.
+
+const calc = function(operacao, num1, num2) {
+	return operacao(num1, num2);
+}
+
+const soma = function(num1, num2) {
+	return num1+num2;
+}
+
+const sub = function(num1, num2) {
+	return num1-num2;
+}
+
+console.log(calc(soma, 1, 2)); //3
+console.log(calc(sub, 1, 2)); //-1
+
+
+Valores padrão:
+pode-se declarar um default junto com o parâmetro enviado para a função
+
+Objeto "arguments":
+um array contendo todos os parâmetros passados quando função foi invocada
+
+Arrays:
+spread - usado ao chamar a função, uma forma de lidar separadamente com cada elemento do array (...array)
+
+rest - usado ao declarar a função, junta os elementos em um array - oposto de spread (...args)
+
+
+Objetos:
+destructuring - entre chaves {}, filtrar apenas os dados que interessam em um objeto
+
+If/Else:
+JS sempre palavras separadas, usagem já sei
+
+Switch/case:
+comparação tipo e valor (===)
+sempre precisa de um default
+ideal para muitos valores
+
+For:
+for (var inicial; verificação loop ; mudança)
+
+For...in:
+loop entre propriedades enumeráveis de um objeto
+function forInEx(obj){
+	for(prop in obj) {
+		console.log(prop);		//ou (obj[prop])
+	}
+}
+
+const meuObj = {
+	nome: "João",
+	idade: "20",
+	cidade: "Salvador"
+}
+
+forInEx(meuObj);
+//nome							//João
+//idade							//20
+//cidade						//Salvador
+
+
+For...of:
+loop entre estruturas iteráveis (arrays,strings)
+function logLetras(palavra) {
+	for(letra of palavra) {
+		console.log(letra);
+	}
+}
+
+const palavra = "abacaxi";
+
+logLetras(palavra); //a //b //a //c //a //x //i
+
+
+
+While:
+function exWhile() {
+	let num=0;
+
+	while(num <= 5){
+		console.log(num);
+		num++;
+	}
+}
+
+exWhile(); //0 //1 //2 //3 //4 //5
+
+
+Do...while:
+igual, mas sempre executa pelo menos uma vez (verifica depois de executar)
+
+do {...} while(num <=5);
+
+
+THIS:
+usado dentro de um objeto para se referir ao próprio objeto
+
+ex: 
+const pessoa = {
+	firstName: "Guilherme",
+	lastName: "Kremer",
+	fullName: function(){
+		return this.firstName + " " + this.lastName;
+	}
+};
+
+pessoa.fullName(); //"Guilherme Kremer"
+
+Call:
+usado para chamar o "this" dando o valor de uma variável ele
+
+Apply:
+parecido com call, mas manda parametros detro de array
+
+Bind:
+clona a estrutura da função e aplica o valor parâmetro
+
+
+
+
+DEBUGGING e ERROS HANDLING (JS)
+Tipos:
+ECMAScript Error - ocorrem em execução
+	contém: Mensagem, Nome, Linha, Call Stack
+DOMException - relacionados ao Document Object Model (DOM) - página da web
+
+Tratando:
+Throw - é como um return, mas vem em forma de erro
+Try...catch - dentro do try, executa o código; se tiver algum tipo de erro, usa o catch(e) para decidir os próximos comandos
+Finally - executa um código depois do try, independentemente de dar erro ou nao
+
+Criando:
+objeto Error
+cód(
+new Error(message, fileName, lineNumber)
+//todos parametros opcionais
+const MeuErro = new Error('Mensagem Inválida');
+
+throw MeuErro;
+)
+pode ter propriedades, como MeuErro.name
