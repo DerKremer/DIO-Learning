@@ -246,3 +246,71 @@ const MeuErro = new Error('Mensagem Inválida');
 throw MeuErro;
 )
 pode ter propriedades, como MeuErro.name
+Tipos de erro: ReferenceError, TypeError, RangeError, etc;
+
+
+
+
+JAVASCRIPT ASSÍNCRONO:
+Assincronicidade:
+síncrono - todos ao mesmo tempo
+assíncrono - cada um em seu tempo
+Por padrão, JS roda de forma síncrona:
+Cliente faz pedido e espera o servidor retornar com a resposta para continuar.
+No modo assíncrono, você faz o pedido e enquanto o servidor processa, você o cliente continua trabalhando
+
+Promises:
+objeto de processamento assíncrono, pode ser resolvida ou rejeitada. Seu valor inicialmente é desconhecido.
+tem 3 estados - pending, fulfilled e rejected
+pode ser estabelecido o que fazer em caso de sucesso e de erro
+
+Async/await:
+async é usado para avisar que a função é assíncrona, e await faz com que seu código pare até que a função assíncrona seja resolvida
+
+chamar uma função assíncrona sem await retorna sua Promise
+chamar usando await faz com que ela execute e retorne o resultado
+
+
+
+Consumindo APIs:
+API(Application Programming Interface): Forma de intermediar os resultados do back-end com o que é apresentado no front-end. Acessada por meio de URLs.
+JSON (JavaScript Object Notation): é comum APIs retornarem dados em formato .json, que precisam ser tratados.
+
+fetch:
+fetch(url, options)
+	.then(response => response.json());
+	.then(json => console.log(json));
+	//retorna uma Promise
+	
+operações no banco de dados: POST, GET, PUT, DELETE, etc
+	
+exemplo:
+fetch('https://endereco-api.com/', {
+	method: 'GET',
+	cache: 'no-cache',
+})
+	.then(response => response.json());
+	.then(json => console.log(json));
+	//retorna Promise
+	
+fetch('https://endereco-api.com/', {
+	method: 'POST',
+	cache: 'no-cache',
+	body: JSON.stringify(data)
+})
+	.then(response => response.json());
+	.then(json => console.log(json));
+	//retorna uma Promise
+	
+	
+	
+	
+----- ORIENTAÇÃO A OBJETOS COM JS ------
+Protótipos: todos os objetos herdam propriedades e métodos de um prototype. o obj Object.prototype está no topo desta cadeia. -----contém os métodos padrão
+
+Classes: Syntatic sugar - uma sintaxe para facilitar a escrita. não existe nativamente, as classes são objetos e a herança se dá por protótipos
+sempre vai ter o construtor que vai construí a classes
+getter (get) - retorna o tipo
+setter (set) - muda/configura o tipo
+super() - constrói classe filha e salva valor na classe pai
+method(){ super.method(); console.log('Meow'); } - método
