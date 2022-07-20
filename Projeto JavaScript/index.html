@@ -4,13 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" src="styles.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
     <title>Jogo da Memória</title>
 </head>
 <body>
-    <main class="memory-game">
-
+    <!-- BG video -->
+    <video autoplay muted loop id="myVideo">
+        <source src="img/intro.mp4" type="video/mp4">
+    </video>
+    <div id="video-offset">
+    <main id="game-bg">
+        <img src="img/logo-final.png" id="logo">
+        <div class="memory-game">
+            <div class="card" data-card="arceus">
+                <img src="img/arceus.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="dragonair">
+                <img src="img/dragonair.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="lugia">
+                <img src="img/lugia.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="mewtwo">
+                <img src="img/mewtwo.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="pikachu">
+                <img src="img/pikachu.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="umbreon">
+                <img src="img/umbreon.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="arceus">
+                <img src="img/arceus.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="dragonair">
+                <img src="img/dragonair.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="lugia">
+                <img src="img/lugia.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="mewtwo">
+                <img src="img/mewtwo.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="pikachu">
+                <img src="img/pikachu.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+            <div class="card" data-card="umbreon">
+                <img src="img/umbreon.png" alt="face da carta" class="card-front">
+                <img src="img/pokeball-1.png" alt="verso da carta" class="card-back" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+        </div>
     </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
