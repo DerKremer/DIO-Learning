@@ -314,3 +314,33 @@ getter (get) - retorna o tipo
 setter (set) - muda/configura o tipo
 super() - constrói classe filha e salva valor na classe pai
 method(){ super.method(); console.log('Meow'); } - método
+
+
+
+MANIPULANDO D.O.M. COM JS
+Document Object Model, padrão de acessar e modificar elementos HTML
+B.O.M. = Browser Object Model - window > document > history...
+
+document.getElementsBy_____('..'); //id, class, tag
+document.querySelectorAll('.primeira-classe .segunda-classe');
+
+adicionar e deletar:
+document.createElement()
+document.removeChild()
+document.appendChild()
+document.replaceChild(new, old)
+
+
+Manipular objetos:
+no HTML:
+Element.classList()
+
+const meuElemento = documen.getElementById("meu-elemento")
+
+meuElement.classList.add("novo-estilo")
+meuElement.classList.remove("classe")
+meuElement.classList.toggle("dark-mode")
+
+
+acessar diretamente o CSS:
+document.getElmentsByTagName("p").style.color = "blue";
